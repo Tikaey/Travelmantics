@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:layout_marginTop="32dp"
+                    android:id="@+id/edt_title" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:hint="@string/price"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/edt_price" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:hint="@string/description_label"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/edt_description" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:text="@string/select_image"
+                android:id="@+id/imageButton"
+                android:layout_width="140dp"
+                android:layout_gravity="center"
+                android:layout_height="45dp"
+                android:textAllCaps="true"
+                android:layout_marginTop="16dp" />
+
+            <ImageView
+                android:id="@+id/cropImageView"
+                android:layout_marginTop="16dp"
+                android:padding="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/progresslayout"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/colorPrimaryTrans"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</FrameLayout>
